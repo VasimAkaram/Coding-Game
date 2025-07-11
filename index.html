@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Knight - Typing Battle Game</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Optional: Fantasy Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Start Screen -->
+  <div id="start-screen" class="screen">
+    <h1>⚔️ Code Knight ⚔️</h1>
+    <button id="start-btn">Start Game</button>
+    <button id="practice-btn">Practice Mode</button>
+    <div id="high-score"></div>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen hidden">
+    <div class="hud">
+      <div class="player-info">
+        <span id="player-health-label">Player</span>
+        <div class="health-bar"><div id="player-health" class="health"></div></div>
+      </div>
+      <div class="enemy-info">
+        <span id="enemy-name">Enemy</span>
+        <div class="health-bar"><div id="enemy-health" class="health"></div></div>
+      </div>
+      <div class="combo-streak" id="combo-streak"></div>
+      <div class="level-info">Level: <span id="level">1</span></div>
+      <div class="score-info">Score: <span id="score">0</span></div>
+    </div>
+    <div class="battlefield">
+      <div id="enemy-avatar" class="enemy-avatar"></div>
+      <div class="code-area">
+        <div id="code-tooltip" class="tooltip"></div>
+        <pre id="code-snippet"></pre>
+        <div id="typed-progress"></div>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <div id="progress-inner"></div>
+    </div>
+  </div>
+
+  <!-- End Screen -->
+  <div id="end-screen" class="screen hidden">
+    <h2 id="end-title"></h2>
+    <div id="final-score"></div>
+    <button id="restart-btn">Restart</button>
+    <button id="back-btn">Back to Menu</button>
+  </div>
+
+  <audio id="sword-sound" src="sword.mp3" preload="auto"></audio>
+  <audio id="grunt-sound" src="grunt.mp3" preload="auto"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html> 
